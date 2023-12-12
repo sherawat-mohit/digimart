@@ -45,8 +45,6 @@ a:visited {
 
 
 /* Navbar css */
-
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -161,6 +159,7 @@ a:visited {
 }
 
 
+/* sort button styling */
 .sort-btn{
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -175,7 +174,6 @@ a:visited {
 
 
 /* product-list.css */
-
 .product {
     display: flex;
     justify-content: space-between;
@@ -251,7 +249,6 @@ a:visited {
 
 
 /* confirm-modal */
-
 .confirm-modal {
     position: fixed;
     top: 0px;

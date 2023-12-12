@@ -1,18 +1,18 @@
-// CartPage component
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteFromCart } from '../store/reducer';
 
+// CartPage component
 const CartPage = () => {
-
     const cartItems = useSelector((state) => state.cart);
     const dispatch = useDispatch();
+
+    //remove from cart button functionality in cart page
     const removeFromCart = (id) => {
         dispatch(deleteFromCart(id));
     }
     return (
         <div style={{ margin: "30px" }}>
-
             {cartItems.length === 0 ? (
                 <p style={{ fontWeight: "600", fontSize: 40, textAlign:"center"}}>Your Cart is Empty</p>
             ) : <>

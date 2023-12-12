@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// navigating to the path
 const NavBar = () => {
     const navigate = useNavigate();
     const navigateHandle = (path) => {

@@ -3,19 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { createProduct, updateProduct } from '../store/reducer';
 
+
 function generateId() {
     const alphanumeric = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let id = '';
-
     for (let i = 0; i < 8; i++) {
         const randomIndex = Math.floor(Math.random() * alphanumeric.length);
         id += alphanumeric.charAt(randomIndex);
     }
-
     return id;
 }
 
-
+// Add product page component
 const Form = () => {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
@@ -39,9 +38,10 @@ const Form = () => {
             [e.target.name]: e.target.value,
         });
     };
+
+    // handling different situations while submitting form to add new product
     const handleSubmit = (e) => {
         e.preventDefault();
-
         // Basic validation
         const validationErrors = {};
         if (!formData.name) {
